@@ -131,8 +131,10 @@ const createPost = (post) => {
                           ${post.comments?.map(
                             (
                               comment
-                            ) => ` <a class="post__name--underline" href="#">${comment.user} </a>
-                            ${comment.text}
+                            ) => ` <a class="post__name--underline" href="#">${
+                              comment.user ? comment.user : " User not found"
+                            } </a>
+                            ${comment.text ? comment.text : "text not found"}
                           `
                           )}
                     </small>
