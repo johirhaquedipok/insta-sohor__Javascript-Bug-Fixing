@@ -5,7 +5,7 @@ what to do!!
 FIX (MANDATORY)5 OR 6 BUGS.
 BUGS ARE AS FOLLOWS:
 1.Like Button doesn't work. 👍Fixed🙂
-2.Show user profile picture at the top of the picture with the name.
+2.Show user profile picture at the top of the picture with the name.👍Fixed🙂
 3.Show description not more than 30 character else display whole description.
 4.show commenter's name and comment.
 5. After clicking on report button, the reported post should be added to the reported list post. But it shows all posts.
