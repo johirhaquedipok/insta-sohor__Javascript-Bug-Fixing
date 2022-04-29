@@ -8,14 +8,10 @@ const getLikedPosts = () => {
 };
 
 const getReportedPosts = () => {
-<<<<<<< HEAD
   console.log(
-    posts.filter((post) => reportedPostsId.includes(post.id)),
-    "posts filtered"
+    posts.filter((post) => !reportedPostsId.includes(post.id)),
+    "get reporteds posts filter is pushing all"
   );
-=======
-  console.log(posts.filter((post) => reportedPostsId.includes(post.id)), 'return filtered arrays from the post');
->>>>>>> def5fcd95a2d60edfa9230c5f9b5720dad0f0dc2
   return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
@@ -30,10 +26,8 @@ const addToLiked = (id) => {
 
 const reportPost = (id) => {
   reportedPostsId.push(id);
-
-  console.log(reportedPostsId);
   const remainingPosts = posts.filter(
-    (post) => reportedPostsId.includes(post.id)
+    (post) => !reportedPostsId.includes(post.id)
   );
   showPosts(remainingPosts);
 };
@@ -174,18 +168,11 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
-  if(reportedPostsId.includes(posts.id)) {
-    // checkng for bugs
-    return;
-  }
   const reportedPosts = getReportedPosts();
+  console.log(reportedPosts, "all posts called from displayReportedPosts");
   reportedPosts.forEach((post) => {
-    console.log(post, "post printed every time to the screen");
-    console.log(post.id);
-    if (!reportedPosts.includes(post.id)) {
-      const div = createPost(post);
-      document.getElementById("reported").appendChild(div);
-    }
+    const div = createPost(post);
+    document.getElementById("reported").appendChild(div);
   });
 };
 

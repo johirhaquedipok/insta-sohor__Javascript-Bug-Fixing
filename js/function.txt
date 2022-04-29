@@ -1,1 +1,16 @@
-displayReported function CALLED.
+events list
+
+reportPost();
+
+report post called.
+
+    1.clicked id pushed to the reportedPostsId = [] array;
+    2.and remaining posts are filtered to the remainingPosts variable.
+
+    3.remainingPosts are passed to the showPosts() function.
+
+
+1. displayReportedPosts();
+    called
+        getReportedPosts() called
+        1. filters 
