@@ -1,7 +1,7 @@
 let posts = [];
 
 let likedPostsId = [];
-const reportedPostsId = [];
+let reportedPostsId = [];
 
 const getLikedPosts = () => {
   return posts.filter((post) => likedPostsId.includes(post.id));
@@ -20,13 +20,18 @@ const addToLiked = (id) => {
    likedPostsId = likedPostsId.filter(number => number !== id);
   }else {
     likedPostsId.push(id)
-    console.log(likedPostsId)
   }
   showPosts(posts);
 };
 
 const reportPost = (id) => {
-  reportedPostsId.push(id);
+  /* if(reportedPostsId.includes(id)) {
+    reportedPostsId = reportedPostsId.filter(number => number !== id);
+   }else {
+     reportedPostsId.push(id);
+    } */
+    reportedPostsId.push(id);
+
   const remainingPosts = posts.filter(
     (post) => !reportedPostsId.includes(post.id)
   );
