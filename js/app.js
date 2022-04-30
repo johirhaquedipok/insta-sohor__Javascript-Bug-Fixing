@@ -1,7 +1,7 @@
 let posts = [];
 
 let likedPostsId = [];
-let reportedPostsId = [];
+const reportedPostsId = [];
 
 const getLikedPosts = () => {
   return posts.filter((post) => likedPostsId.includes(post.id));
@@ -16,6 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
+  // conditon added to like and dislike
   if(likedPostsId.includes(id)) {
    likedPostsId = likedPostsId.filter(number => number !== id);
   }else {
@@ -25,11 +26,6 @@ const addToLiked = (id) => {
 };
 
 const reportPost = (id) => {
-  /* if(reportedPostsId.includes(id)) {
-    reportedPostsId = reportedPostsId.filter(number => number !== id);
-   }else {
-     reportedPostsId.push(id);
-    } */
     reportedPostsId.push(id);
 
   const remainingPosts = posts.filter(
@@ -44,6 +40,7 @@ const displayContent = (text) => {
     : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
+// removing the element from DOM to stop adding the same item
 const removeElement = (id) => {
   let element = document.getElementById(id);
   while (element.firstChild) {
@@ -56,17 +53,18 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    // removing the element from DOM to stop adding the same item
     removeElement("reported")
     removeElement("liked")
 
   } else if (id === "liked") {
-    document.getElementById("liked").style.display = "flex";
+    document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
 
     displayLikedPosts();
   } else {
-    document.getElementById("reported").style.display = "flex";
+    document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
     displayReportedPosts();
@@ -167,7 +165,12 @@ const createPost = (post) => {
 const showPosts = (posts) => {
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
-  posts.forEach((post) => {
+
+  // filtered the reported post out from the regular posts 
+  const remainingPosts = posts.filter(
+    (post) => !reportedPostsId.includes(post.id)
+  );
+  remainingPosts.forEach((post) => {
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
