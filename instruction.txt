@@ -18,8 +18,9 @@ Bonus:
 2. Add a section at the bottom of the body and answer 2 queston out of 3 with more than 5 lines and not more than 10 lines.
  quesitons are as follows:
 
-2a. How does javascript work?
+2a. How does javascript work?👍Done🙂 
     JavaScript is a client-side scripting language. it runs at the client-side inside the web-browser. The web browser has a javascript engine that runs the code. For example, Chrome has a javascript engine called V8. AS javascript is a interpreted language and it gets executed by line line that means the JavaScript engine converts the Js code line by line and runs the code instead of converting the whole program once.
 
 2b. What does javascript event loop do?
+        When JavaScript engine starts to execute a script, it creats the execution context. It pushes pushes a function to the call stack and pops it when it's done. But for asynchronous task, JavaScript engine push the task into a queue called a callback queue. That is where Event Loop comes into play. It constantly checks both the callback queue and the call stack. When the call stack is empty, the event loop  places the task from the callback queue to the call stack. 
 2c. Local Storage vs Session Storage.

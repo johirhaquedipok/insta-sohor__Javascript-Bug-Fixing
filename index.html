@@ -89,20 +89,122 @@
       </div>
     </main>
     <section class="container my-3">
-      <h2 class="mb-3">Questions and Answer Part</h2>
-      <h3>How does javascript work?</h3>
-      <p>
-        JavaScript is a client-side scripting language. it runs at the
-        client-side inside the web-browser. The web browser has a javascript
-        engine that runs the code. For example, Chrome has a javascript engine
-        called V8. AS javascript is a interpreted language and it gets executed
-        by line line that means the JavaScript engine converts the Js code line
-        by line and runs the code instead of converting the whole program once.
-      </p>
+      <h2 class="mb-3 text-center">FAQ</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <!-- accordion -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  How does javascript work?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  JavaScript is a client-side scripting language. it runs at the
+                  client-side inside the web-browser. The web browser has a
+                  javascript engine that runs the code. For example, Chrome has
+                  a javascript engine called V8. AS javascript is a interpreted
+                  language and it gets executed line by line that means the
+                  JavaScript engine converts the Js code line by line and runs
+                  the code instead of converting the whole program once.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  What does javascript event loop do?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  When JavaScript engine starts to execute a script, it creats
+                  the execution context. It pushes pushes a function to the call
+                  stack and pops it when it's done. But for asynchronous task,
+                  JavaScript engine push the task into a queue called a callback
+                  queue. That is where Event Loop comes into play. It constantly
+                  checks both the callback queue and the call stack. When the
+                  call stack is empty, the event loop places the task from the
+                  callback queue to the call stack.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Local Storage vs Session Storage.
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Data stored in local storage does not expire. But data in
+                    Session Storage gets cleared when the browser tab is closed.
+                  </p>
+                  <p>
+                    Data that are not confidential but reduce the amount of
+                    traffic between client and server is saved in Local Storage.
+                    But any data that can be confidential use the Session
+                    Storage so that can be cleared out after the user closes the
+                    browser or window.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="images/event-loop.png" alt="" />
+        </div>
+      </div>
     </section>
     <footer></footer>
 
     <!-- add javascript  file  -->
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
