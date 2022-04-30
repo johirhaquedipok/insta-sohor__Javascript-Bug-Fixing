@@ -8,16 +8,18 @@ BUGS ARE AS FOLLOWS:
 2.Show user profile picture at the top of the picture with the name.👍Fixed🙂
 3.Show description not more than 30 character else display whole description.👍Fixed🙂
 4.show commenter's name and comment.👍Fixed🙂   
-5. After clicking on report button, the reported post should be added to the reported list post. But it shows all posts.
-6.Fix liked list. AFter click, liked post added to the liked list and it adds same liked post again when i go back to all post with the home button click.
+5. After clicking on report button, the reported post should be added to the reported list post. But it shows all posts.👍Fixed🙂 
+6.Fix liked list. AFter click, liked post added to the liked list and it adds same liked post again when i go back to all post with the home button click.👍Fixed🙂 
 
 
 Bonus:  
-1.minimum 6 commits
+1.minimum 6 commits 👍Done🙂 
 
-2. Add a section at the bottom of the body and anser more than 1 queston out of 3 with more than 5 lines and note more than 10 lines.
- quesitons are follows:
+2. Add a section at the bottom of the body and answer 2 queston out of 3 with more than 5 lines and not more than 10 lines.
+ quesitons are as follows:
 
 2a. How does javascript work?
+    JavaScript is a client-side scripting language. it runs at the client-side inside the web-browser. The web browser has a javascript engine that runs the code. For example, Chrome has a javascript engine called V8. AS javascript is a interpreted language and it gets executed by line line that means the JavaScript engine converts the Js code line by line and runs the code instead of converting the whole program once.
+
 2b. What does javascript event loop do?
 2c. Local Storage vs Session Storage.
