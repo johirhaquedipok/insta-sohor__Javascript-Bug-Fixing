@@ -114,13 +114,14 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  JavaScript is a client-side scripting language. it runs at the
-                  client-side inside the web-browser. The web browser has a
-                  javascript engine that runs the code. For example, Chrome has
-                  a javascript engine called V8. AS javascript is a interpreted
-                  language and it gets executed line by line that means the
-                  JavaScript engine converts the Js code line by line and runs
-                  the code instead of converting the whole program once.
+                  <em>JavaScript</em> is a client-side scripting language. It
+                  runs on the client-side inside the web-browser. The web
+                  browser has a <strong>JavaScript engine</strong> that runs the
+                  code. For example, Chrome has a <em>JavaScript</em> engine
+                  called V8. AS <em>JavaScript</em> is an interpreted language.
+                  It gets executed line by line. The
+                  <strong>JavaScript engine</strong> converts the code line by
+                  line to byte code (machine language) and runs the code.
                 </div>
               </div>
             </div>
@@ -144,14 +145,16 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  When JavaScript engine starts to execute a script, it creats
-                  the execution context. It pushes pushes a function to the call
-                  stack and pops it when it's done. But for asynchronous task,
-                  JavaScript engine push the task into a queue called a callback
-                  queue. That is where Event Loop comes into play. It constantly
-                  checks both the callback queue and the call stack. When the
-                  call stack is empty, the event loop places the task from the
-                  callback queue to the call stack.
+                  The <strong>JavaScript engine</strong> starts to execute a
+                  script from the top of the line. It creates an
+                  <em>execution context</em>. It pushes a function into the call
+                  stack and pops it out when it's done. But for asynchronous
+                  tasks, the <strong>JavaScript engine</strong> pushes the task
+                  into a queue called a <em>callback queue</em>. The
+                  <strong>Event Loop</strong> constantly checks both the
+                  callback queue and the call stack. When the call stack is
+                  empty, the event loop places the task from the callback queue
+                  to the call stack.
                 </div>
               </div>
             </div>
@@ -192,7 +195,11 @@
           </div>
         </div>
         <div class="col-md-6">
-          <img src="images/event-loop.png" alt="" />
+          <img
+            src="images/event-loop.png"
+            alt="event-loop"
+            title="event-loop"
+          />
         </div>
       </div>
     </section>
